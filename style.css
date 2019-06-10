@@ -1,0 +1,33 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-container {
+  width: auto;
+}
+.film-container {
+  display: flex;
+  justify-content: space-between;
+  width: 470px;
+  height: 25px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 8px 8px 0 8px;
+}
+.yellow {
+  color: #e9ff23;
+}
