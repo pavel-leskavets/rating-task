@@ -5,6 +5,13 @@ containerOfStars.addEventListener("mouseout", starCleaning);
 let countOfStars = 0;
 
 function getCurrentStar(e) {
+  let markDiv = e.target.parentElement.parentElement;
+  if (e.type === "click") {
+    markDiv.classList.add("mark");
+  }
+  if (markDiv.classList.contains("mark")) {
+    return;
+  }
   if (e.target.classList.contains("fas")) {
     if (e.target.classList.contains("first-star")) {
       countOfStars = 0;
@@ -31,11 +38,13 @@ function drawStars(count, arr) {
   }
 }
 function starCleaning(e) {
-  if (e.target.classList.contains("film-container") && state !== true) {
-    let arrOfStars = e.target.parentElement.querySelectorAll(".fas");
+  if (e.target.classList.contains("film-container")) {
+    if (e.target.classList.contains("mark")) {
+      return;
+    }
+    let arrOfStars = e.target.querySelectorAll(".fas");
     arrOfStars.forEach(item => {
       item.classList.remove("yellow");
     });
-    state = false;
   }
 }
