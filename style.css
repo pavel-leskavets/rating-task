@@ -28,7 +28,7 @@ body {
   padding: 10px;
   cursor: default;
 }
-.yellow {
+.checked {
   color: #e9ff23;
 }
 .add-form {

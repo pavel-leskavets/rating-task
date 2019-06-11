@@ -51,10 +51,10 @@ function getCurrentStar(e) {
 }
 function drawStars(count, arr) {
   arr.forEach(item => {
-    item.classList.remove("yellow");
+    item.classList.remove("checked");
   });
   for (let i = 0; i <= count; i++) {
-    arr[i].classList.add("yellow");
+    arr[i].classList.add("checked");
   }
 }
 function starCleaning(e) {
@@ -64,7 +64,7 @@ function starCleaning(e) {
     }
     let arrOfStars = e.target.querySelectorAll(".fas");
     arrOfStars.forEach(item => {
-      item.classList.remove("yellow");
+      item.classList.remove("checked");
     });
   }
 }
@@ -79,6 +79,7 @@ function sortFilmsByRate() {
 }
 function sortFilmsByTitle() {
   const arr = [];
+
   Array.from(document.querySelectorAll(".mark"))
     .sort((a, b) => {
       return a.firstElementChild.innerHTML.localeCompare(
