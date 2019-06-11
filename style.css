@@ -31,3 +31,12 @@ body {
 .yellow {
   color: #e9ff23;
 }
+.add-form {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.form-input {
+  width: 200px;
+  height: 20px;
+}
